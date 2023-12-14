@@ -1,0 +1,57 @@
+//ARCHIVO ACTUALIZAO HASTA LA CLASE 13
+
+
+            //Ahora con la función, aunque esta puede ir más arriba. Antes de let jugador. Es una "declaración de una función"
+            //Las funciones son variables de tipo función, así como los números son variables de tipo número.
+            function aleatorio(min, max) {
+                return Math.floor(Math.random()*(max - min + 1) + min)
+            }
+            //Dentro del paréntesis se escribe el parámetro 
+            function eleccion(jugada) {
+                let resultado = ""
+                if(jugada == 1) {
+                    resultado = "Piedra"
+                } else if(jugada == 2) {
+                    resultado = "Papel"
+                } else if(jugada == 3) {
+                    resultado = "Tijera"
+                } else {
+                    resultado = "ERROR. Deles elegir 1, 2 o 3"
+                }
+                return resultado
+            }
+            //1 es piedra, 2 es papel y 3 es tijera
+            let jugador = 0
+            // Ahora, se cita la función. Es una "invocación de una función"
+            let pc = 0
+            let triunfos = 0
+            let perdidas = 0
+
+            while (triunfos < 3 && perdidas < 3) {
+                //Cada vez que ocurre el ciplo, tanto el pc como el jugador eligen aleatorio.
+                pc = aleatorio(1,3)
+                jugador = prompt("Elige: 1 para piedra, 2 para papel y 3 para tijera")
+                
+                alert("PC elige: "+ eleccion(pc))
+                alert("Tú eliges: "+ eleccion(jugador))
+            
+                //Combate. Se comienza con los empates. Luego, los casos en que se gana. De lo contrario, se pierde
+                if(pc == jugador) {
+                    alert("EMPATE")
+                } else if(jugador == 1 && pc == 3) {
+                    alert("GANASTE")
+                    triunfos = triunfos + 1
+                } else if(jugador == 2 && pc == 1) {
+                    alert("GANASTE")
+                    triunfos = triunfos + 1
+                } else if(jugador == 3 && pc == 2) {
+                    alert("GANASTE")
+                    triunfos = triunfos + 1
+                } else {
+                    alert("PERDISTE")
+                    perdidas = perdidas + 1
+                }
+            }
+
+            alert("Ganaste " + triunfos + " veces. Perdiste " + perdidas + " veces.")
+            

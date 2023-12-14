@@ -1,0 +1,64 @@
+<!-- Archivo actualizado en clase 17 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MOKEPON!</title>
+        <script src="./js/mokepon.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head>
+
+    <body>
+        <h1>MOKEPON! 🔥💧🌿</h1>
+        
+        <!-- Las secciones ayudan a ordenarnos en las partes que queremos. Se deben escribir con guiones, no con espacios -->
+        <section id="seleccionar-mascota">
+            <h2>Elige tu mascota:</h2>
+            <!-- input permite al usuario ingresar algo. Hay varios tipos, como text, number, time, date, radio, checkbox. Para agruparlos (y que nos dejen seleccionar solo uno, se debe colocar un nombre) -->
+            <input type="radio" name="mascota" id="hipodoge" />
+            <!-- el for dentro del label permite vincular con el input. Cuando los usuarios seleccionen la palabra, se seleccionará el círculo -->
+            <label for="hipodoge">Hipodoge</label>
+
+            <input type="radio" name="mascota" id="capipepo" />
+            <label for="capipepo">Capipepo</label>
+
+            <input type="radio" name="mascota" id="ratigueya"/>
+            <label for="ratigueya">Ratigueya</label>
+
+            <input type="radio" name="mascota" id="langostelvis" />
+            <label for="langostelvis">Langostelvis</label>
+
+            <input type="radio" name="mascota" id="tucapalma" />
+            <label for="tucapalma">Tucapalma</label>
+
+            <input type="radio" name="mascota" id="pydos" />
+            <label for="pydos">Pydos</label>
+
+            <button id="boton-mascota">Seleccionar</button>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h2>Elige tu ataque:</h2>
+            
+            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
+            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+
+            <p>
+                <button id="boton-fuego">Fuego 🔥</button>
+                <button id="boton-agua">Agua 💧</button>
+                <button id="boton-tierra">Tierra 🌿</button>
+            </p>
+        </section>
+
+        <section id="mensajes">
+        </section>
+
+        <section id="reiniciar">
+            <button id="boton-reiniciar">Reiniciar</button>
+        </section>
+        
+        
+        
+    </body>
+</html>
